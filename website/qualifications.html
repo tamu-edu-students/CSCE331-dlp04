@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="first-style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <title>My Website</title>
+    </head>
+    <body>
+        <div class="topnav">
+            <img src="img/my-logo.png" alt="Logo" width="60" height="50">
+            <a href="ai.html">AI</a>
+            <a href="service.html">Service</a>
+            <a class="active" href="qualifications.html">Qualifications</a>
+            <a href="skills.html">Skills</a>
+            <a href="index.html">Home</a>
+        </div>
+        <div class="normal-page">
+            <div class="background-image">
+                <img src="img/black-background-2.jpg" alt="Background Image">
+            </div>
+            <div class="text-overlay">
+                <h1>Qualifications</h1>
+                <p class="divider">------------------------------</p>
+                <div class="progress-bars">
+                <div class="row">
+                    <div class="column">
+                    <label>&nbsp;&nbsp;&nbsp;Python</label>
+                    <div class="progress-bar">
+                        <div class="progress-bar-inner" style="width: 100%;">
+                        <span>100%</span>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="column">
+                    <label>&nbsp;&nbsp;&nbsp;Ubuntu</label>
+                    <div class="progress-bar">
+                        <div class="progress-bar-inner" style="width: 90%;">
+                        <span>90%</span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                    <label>&nbsp;&nbsp;&nbsp;SQL</label>
+                    <div class="progress-bar">
+                        <div class="progress-bar-inner" style="width: 80%;">
+                        <span>80%</span>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="column">
+                    <label>&nbsp;&nbsp;&nbsp;Power BI</label>
+                    <div class="progress-bar">
+                        <div class="progress-bar-inner" style="width: 90%;">
+                        <span>90%</span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                    <label>&nbsp;&nbsp;&nbsp;PowerShell</label>
+                    <div class="progress-bar">
+                        <div class="progress-bar-inner" style="width: 85%;">
+                        <span>85%</span>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="column">
+                    <label>&nbsp;&nbsp;&nbsp;NMap</label>
+                    <div class="progress-bar">
+                        <div class="progress-bar-inner" style="width: 80%;">
+                        <span>80%</span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <img src="img/quals.png" alt="Qualifications Image">
+            <button class="download-resume" onclick="scrollToMoreInfo()">
+                <i class="fas fa-arrow-down"></i>
+                <span>Download resume below</span>
+                
+            </button>
+            <script>
+                function scrollToMoreInfo() {
+                    document.getElementById('more-info-anchor').scrollIntoView({ behavior: 'smooth' });
+                }
+            </script>
+        </div>
+        <section id="more-info-anchor" class="more-info">
+            <div class="container">
+                <div class="download-resume-button">
+                <a href="pdfs/my-resume.pdf" download>
+                    <button>Download My Resume</button>
+                </a>
+                </div>
+                <h1>Why Cybersecurity?</h1>
+                <p style="text-indent: 25px;">
+                    As a kid, I mainly viewed a computer as an entertainment station where you would either go on there to watch YouTube or play Minecraft. However, thanks to my parents, they introduced me to coding. 
+                    They enrolled me in a Minecraft coding camp in 6th grade, and this gave me my first glimpse into the possibilities of automation and technology. 
+                    The cherry on top that fully sold me on pursuing a career in computer science was a field trip I took to the Google office in Austin. Their work culture of promoting communication, inclusion, and healthy work-life balance resonates deeply with me. 
+                </p>
+                <p style="text-indent: 25px;">
+                    That answers how I got interested in computer science in the first place. However, my interest in cybersecurity came later during my sophomore year of high school when I was in AP Computer Science Principles. The teacher of the class was advertising a cybersecurity competition hosted by the U.S. Airforce called CyberPatriots, and after the first meeting, I was utterly lost, but they had free food, so I stuck around. 
+                    With the guidance of my teammates, teacher, and the internet of course, our team ranked in the top 40% of the nation in our first year. In the following two years, I was elected the team captain as I adapted the quickest, and with my leadership, our team rose to the top 25% in Junior year and 20% in Senior year. 
+                    The competitions mainly consisted of blue teaming activities such as erasing non-work applications, updating old vulnerable applications, and applying up-to-date best system security practices for machines like Windows 10, Windows Server, and Ubuntu. 
+                </p>
+                <p style="text-indent: 25px;">    
+                The gamification is what reeled me in; however, the intricate knowledge I gained from how the system settings interplay with one another and why some practices are more secure than others is what spoke to me the most. And that is why is why I’m pursuing cybersecurity in my professional career.</p>
+            </div>
+            </section>
+    </body>
+</html>

@@ -20,6 +20,9 @@ body {
   font-size:x-large;
   background-color: var(--primary-color);
   color: var(--secondary-color);
+}
+
+.no-scroll {
   overflow: hidden;
 }
 
@@ -58,9 +61,13 @@ body {
   color: var(--secondary-color);
 }
 
+.topnav a.active:hover{
+  background-color: var(--tertiary-color);
+  color: var(--secondary-color);
+}
+
 .background-image {
   position: relative;
-  overflow: hidden;
 }
 
 .background-image img {
@@ -69,7 +76,16 @@ body {
   height: 100%;
 }
 
-.background-image .text-overlay {
+.normal-page .background-image img{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+}
+
+.landing-page .background-image .text-overlay {
   position: absolute;
   top: 50%;
   left: 30%;
@@ -80,7 +96,12 @@ body {
 
 .my-name {
   font-size: 80px;
+  transform: translate(-3px, -60px);
   color: var(--tertiary-color);
+}
+
+.job-title {
+  transform: translate(0px, -100px);
 }
 
 .background-image .me-photo {
@@ -94,7 +115,210 @@ body {
   color: var(--secondary-color);
 }
 
-/* Add this media query to make the text responsive */
+.social-media {
+  position: absolute;
+  top: 585px;
+  left: 275px; 
+  margin-top: 10px;
+}
+
+.social-media a {
+  position: absolute;
+  left: 20%;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.normal-page .text-overlay {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+.divider {
+  color: var(--tertiary-color);
+  font-size: 30px;
+  text-align: left;
+  position: relative;
+  top: -40px;
+}
+
+.normal-page h1 {
+  text-align: left;
+}
+.normal-page img {
+  position: absolute;
+  top : 30%;
+  left: 12%;
+  width: 500px;
+}
+
+.project-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.project {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.project img {
+  position: relative;
+  width: 250px;
+  height: 150px;
+  transform: translate(-29px, -100px);
+}
+
+.project-info {
+  transform: translate(0px, -72px);
+  flex-grow: 1;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.project-info h2 {
+  text-align: left;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.project-info p {
+  font-size: 14px;
+  color: #666;
+}
+
+.progress-bars {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.column {
+  width: 45%;
+}
+
+.progress-bar {
+  width: 250px;
+  height: 28px;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar-inner {
+  height: 100%;
+  background-color: var(--tertiary-color);
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.download-resume {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 18px;
+  color: var(--secondary-color);
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.download-resume i {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.more-info {
+  position: relative;
+  top: 100vh;
+  background-color: var(--secondary-color);
+  width: 100vw;
+  padding: 50px 0;
+}
+
+.more-info .container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.download-resume-button {
+  margin-bottom: 20px;
+}
+
+.download-resume-button button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.download-resume-button button:hover {
+  background-color: var(--tertiary-color);
+}
+
+.more-info h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: var(--primary-color)
+}
+
+.more-info p {
+  font-size: 18px;
+  color: #333;
+  text-align: left;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--secondary-color);
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.2);
+  width: 80%;
+  margin: 0 auto;
+}
+
+.textbox {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--primary-color);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* Make nice on mobile devices
 @media only screen and (max-width: 1240px) {
   .topnav a {
     font-size: 30px;
@@ -116,4 +340,4 @@ body {
     display: none;
   }
 
-}
+}*/
