@@ -121,12 +121,12 @@ body {
 }
 
 .social-media a {
-  left: 20%;
   display: inline-block;
   width: 60px;
   height: 60px;
   text-align: center;
   line-height: 30px;
+  margin-right: 15px;
 }
 
 .normal-page .text-overlay {
