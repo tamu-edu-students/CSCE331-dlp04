@@ -116,14 +116,11 @@ body {
 }
 
 .social-media {
-  position: absolute;
-  top: 585px;
-  left: 275px; 
-  margin-top: 10px;
+  position: relative;
+  transform: translate(0px, -100px);
 }
 
 .social-media a {
-  position: absolute;
   left: 20%;
   display: inline-block;
   width: 60px;
@@ -291,10 +288,8 @@ label {
 }
 
 .content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  transform: translate(0%, 25%);
   color: var(--secondary-color);
   margin-top: 50px;
   padding: 20px;
@@ -341,3 +336,22 @@ label {
   }
 
 }*/
+
+/* Default styles for large screens */
+
+/* Styles for medium screens (e.g., tablets) */
+@media (max-width: 1500px) {
+  body {
+    font-size: 18px;
+  }
+  .normal-page .side-image {
+    width: 30%;
+  }
+}
+
+/* Styles for small screens (e.g., mobile phones) */
+@media (max-width: 800px) {
+  body {
+    font-size: 12px;
+  }
+}
