@@ -4,14 +4,6 @@
     --tertiary-color: #47cc4b;
 }
 
-/* 
-:root{
-    --primary-color: #071E22;
-    --secondary-color: #fefefe;
-    --tertiary-color: #16C172;
-}
-*/
-
 body {
   margin: 0;
   padding: 0;
@@ -48,6 +40,11 @@ body {
   width: 60px;
   height: 50px;
   padding: 13px 10px;
+}
+
+.topnav img:hover{
+  cursor: pointer;
+  scale: 1.1;
 }
 
 .topnav a.active {
@@ -119,6 +116,10 @@ body {
   transform: translate(0px, -100px);
 }
 
+.social-media a:hover{
+  scale:1.1;
+}
+
 .social-media a {
   display: inline-block;
   width: 60px;
@@ -178,6 +179,11 @@ body {
   width: 250px;
   height: 150px;
   transform: translate(-29px, -100px);
+}
+
+.project img:hover{
+  transform: translate(-29px, -100px) 
+  scale(1.1);
 }
 
 .project-info {
@@ -323,48 +329,8 @@ label {
 .side-image-service{
   transform: translate(0px, -50px);
 }
-/* Make nice on mobile devices
-@media only screen and (max-width: 1240px) {
-  .topnav a {
-    font-size: 30px;
-    padding: 7% 1%;
-  }
 
-  body{
-    font-size: xx-large;
-  }
-
-  .my-name{
-    font-size: 50px;
-  }
-  .background-image .text-overlay {
-    text-align: center;
-    left: 50%;
-  }
-  .background-image .me-photo{
-    display: none;
-  }
-
-}*/
-
-/* Default styles for large screens */
-
-/* Styles for medium screens (e.g., tablets) */
-@media (max-width: 1500px) {
-  body {
-    font-size: 18px;
-  }
-  .normal-page .side-image {
-    width: 30%;
-  }
-  .side-image-service{
-    width: 30%;
-  }
-}
-
-/* Styles for small screens (e.g., mobile phones) */
-@media (max-width: 800px) {
-  body {
-    font-size: 12px;
-  }
+.service-text{
+  text-align: left; 
+  transform: translate(-20px, 0px);
 }
