@@ -2,17 +2,19 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="first-style.css">
+        <link id="style" rel="stylesheet" href="first-style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+        <script src="script.js"></script>
         <title>Dakota's Portfolio</title>
         <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     </head>
     <body class="no-scroll">
         <div class="topnav">
-            <img src="img/my-logo.png" alt="Logo" width="60" height="50">
+            <img src="img/my-logo.png" id="logo" alt="Logo" width="60" height="50" onclick="toggleTheme()">
             <a href="ai.html">AI</a>
             <a href="service.html">Service</a>
             <a href="qualifications.html">Qualifications</a>
@@ -21,7 +23,7 @@
         </div>
         <div class= "landing-page">
             <div class="background-image">
-                <img src="img/black-background.jpg" alt="Background Image">
+                <img id="index-background" src="img/black-background.jpg" alt="Background Image">
                 <div class="text-overlay">
                     <h1>Howdy!</h1>
                     <h2>I'm</h2>
@@ -29,7 +31,7 @@
                     <h3 class="job-title">Computer Science Student @ Texas A&M</h3>
                     <div class="social-media">
                         <a href="https://github.com/dakotaPPP">
-                            <img src="img/github-logo.png" >
+                            <img id="github-logo" src="img/github-logo.png" >
                         </a>
                         <a href="https://www.linkedin.com/in/dakota-pound">
                             <img src="img/LinkedIn_logo_initials.png">

@@ -1,7 +1,8 @@
 :root{
-    --primary-color: #000000;
-    --secondary-color: #fefefe;
-    --tertiary-color: #47cc4b;
+    --primary-color: #4f4a45;
+    --secondary-color: #F6F1EE;
+    --tertiary-color: #ED7D31;
+    --light-primary-color: #7e7673;
 }
 
 /* 
@@ -15,7 +16,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Inconsolata', monospace;
   font-optical-sizing: auto;
   font-size:x-large;
   background-color: var(--primary-color);
@@ -52,19 +53,14 @@ body {
 
 .topnav a.active {
   color: var(--primary-color);
-  background-color: var(--tertiary-color);
-  text-decoration-color: var(--primary-color);
+  text-decoration: underline solid var(--tertiary-color);  
+  text-decoration-thickness: 2px;
 }
 
 .topnav a:hover {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
+  color: var(--light-primary-color);
 }
 
-.topnav a.active:hover{
-  background-color: var(--tertiary-color);
-  color: var(--secondary-color);
-}
 
 .background-image {
   position: relative;
@@ -86,12 +82,13 @@ body {
 }
 
 .landing-page .background-image .text-overlay {
+  scale: 1.25;
   position: absolute;
-  top: 50%;
-  left: 30%;
+  top: 55%;
+  left: 69%;
   transform: translate(-50%, -50%);
-  text-align: left;
-  color: var(--secondary-color);
+  text-align: center;
+  color: black;
 }
 
 .my-name {
@@ -107,7 +104,7 @@ body {
 .background-image .me-photo {
   position: absolute;
   top: 60%;
-  left: 70%;
+  left: 30%;
   transform: translate(-50%, -50%);
   width: auto;
   height: 90%;
@@ -131,41 +128,46 @@ body {
 .normal-page .text-overlay {
   position: absolute;
   top: 20%;
-  left: 50%;
+  left: 33%;
   text-align: center;
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .normal-page .text-overlay-2 {
   position: absolute;
   top: 20%;
-  left: 50%;
+  left: 35%;
   text-align: center;
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .divider {
   color: var(--tertiary-color);
   font-size: 30px;
-  text-align: left;
+  text-align: center;
   position: relative;
   top: -40px;
+  text-decoration:line-through;
+  text-decoration-thickness: 4px;
 }
 
 .normal-page h1 {
-  text-align: left;
+  text-align: center;
 }
 .normal-page img {
   position: absolute;
   top : 30%;
   left: 12%;
-  width: 500px;
 }
 
+
+
 .project-stack {
+  scale: 1.25;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  transform: translate(0px, 80px);
 }
 
 .project {
@@ -199,6 +201,7 @@ body {
 }
 
 .progress-bars {
+  scale: 1.25;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -218,7 +221,7 @@ body {
   width: 250px;
   height: 28px;
   background-color: var(--secondary-color);
-  border-radius: 10px;
+  border-radius: 15px;
   overflow: hidden;
 }
 
@@ -241,9 +244,13 @@ label {
   transform: translateX(-50%);
   text-align: center;
   font-size: 18px;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   background-color: transparent;
   border-color: transparent;
+}
+
+.download-resume:hover {
+  color: var(--light-primary-color);
 }
 
 .download-resume i {
@@ -285,7 +292,9 @@ label {
 .more-info h1 {
   font-size: 36px;
   margin-bottom: 10px;
-  color: var(--primary-color)
+  color: var(--primary-color);
+  text-decoration: underline var(--tertiary-color);
+  text-decoration-thickness: 2px;
 }
 
 .more-info p {
@@ -297,7 +306,7 @@ label {
 .content {
   position: relative;
   transform: translate(0%, 25%);
-  color: var(--secondary-color);
+  color: var(--primary-color);
   margin-top: 50px;
   padding: 20px;
   border-radius: 10px;
@@ -320,8 +329,42 @@ label {
   text-align: center;
 }
 
+.textbox p {
+  overflow: hidden;
+  border-right: .05em solid --tertiary-color; 
+  white-space: nowrap; 
+  margin: 0 auto;
+  letter-spacing: .05em; 
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+.side-image{
+  position:absolute;
+  transform: translate(950px, -100px);
+  width: 100px;
+  height: auto;
+}
 .side-image-service{
-  transform: translate(0px, -50px);
+  position:absolute;
+  transform: translate(950px, -100px);
+  width: 100px;
+  height: auto;
+}
+
+.service-text{
+  scale: 1.25;
 }
 /* Make nice on mobile devices
 @media only screen and (max-width: 1240px) {
@@ -349,15 +392,12 @@ label {
 
 /* Default styles for large screens */
 
-/* Styles for medium screens (e.g., tablets) */
+/* Styles for medium screens (e.g., tablets) 
 @media (max-width: 1500px) {
   body {
     font-size: 18px;
   }
   .normal-page .side-image {
-    width: 30%;
-  }
-  .side-image-service{
     width: 30%;
   }
 }

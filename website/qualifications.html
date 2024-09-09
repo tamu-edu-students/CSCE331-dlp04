@@ -2,17 +2,19 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="first-style.css">
+        <link id="style" rel="stylesheet" href="first-style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+        <script src="script.js"></script>
         <title>Dakota's Portfolio</title>
         <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     </head>
     <body>
         <div class="topnav">
-            <img src="img/my-logo.png" alt="Logo" width="60" height="50">
+            <img src="img/my-logo.png" id="logo" alt="Logo" width="60" height="50" onclick="toggleTheme()">
             <a href="ai.html">AI</a>
             <a href="service.html">Service</a>
             <a class="active" href="qualifications.html">Qualifications</a>
@@ -21,9 +23,9 @@
         </div>
         <div class="normal-page">
             <div class="background-image">
-                <img src="img/black-background-2.jpg" alt="Background Image">
+                <img id="normal-background" src="img/black-background-2.jpg" alt="Background Image">
             </div>
-            <div class="text-overlay">
+            <div class="text-overlay-2">
                 <h1>Qualifications</h1>
                 <p class="divider">------------------------------</p>
                 <div class="progress-bars">
@@ -83,7 +85,7 @@
                 </div>
                 </div>
             </div>
-            <img class="side-image" src="img/quals.png" alt="Qualifications Image">
+            <img id="qualifications-logo" class="side-image" src="img/quals.png" alt="Qualifications Image">
             <button class="download-resume" onclick="scrollToMoreInfo()">
                 <i class="fas fa-arrow-down"></i>
                 <span>Download resume below</span>
